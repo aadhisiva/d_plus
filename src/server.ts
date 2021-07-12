@@ -39,8 +39,8 @@ passport.use(
 )
 
 passport.use(new GoogleStrategy({
-  clientID: "some id here",
-  clientSecret: "some secret code is here",
+  clientID: "573709068382-033bnftmjl2fmtn1snmst4hhigo5a2ou.apps.googleusercontent.com",
+  clientSecret: "JrIhQ2-OeI7ko6zytPLtYkDo",
   callbackURL: "http://localhost:8445/user/auth/google/callback"
 },
   function (accessToken, refreshToken, profile, cb) {

@@ -1,12 +1,12 @@
 import {body} from 'express-validator';
 
 let validateRegister = [
-    body('username',{username : "The name must be of minimum 3 characters length"})
-    .notEmpty()
-    .escape()
-    .trim()
-    .isLength({ min: 3 }),
-    body('email',{email : "Email address is not in correct order"})
+    // body('username',{username : "The name must be of minimum 3 characters length"})
+    // .notEmpty()
+    // .escape()
+    // .trim()
+    // .isLength({ min: 3 }),
+    body('username',{username : "Email address is not in correct order"})
     .notEmpty()
     .escape()
     .trim()
@@ -18,7 +18,7 @@ let validateRegister = [
 ]
 
 let validateLogin = [
-    body('email',{email:"Email address is not in correct order"})
+    body('username',{username:"Email address is not in correct order"})
     .notEmpty()
     .escape()
     .trim().isEmail(),

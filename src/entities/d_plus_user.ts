@@ -3,17 +3,12 @@ import { Entity, Column, PrimaryGeneratedColumn, BaseEntity } from "typeorm";
 @Entity()
 export class d_plus_user extends BaseEntity {
   @PrimaryGeneratedColumn()
-  id: number;
+  user_id: number;
 
   @Column({
     length:100
   })
-  firstName: string;
-
-  @Column({
-    length: 50
-  })
-  email: string;
+  first_name: string;
 
   @Column({
     length: 100,
@@ -23,7 +18,7 @@ export class d_plus_user extends BaseEntity {
   @Column({
     length:100
   })
-  lastName: string;
+  last_name: string;
 
   @Column({
     length:100
@@ -33,11 +28,40 @@ export class d_plus_user extends BaseEntity {
   @Column()
   status: Number;
 
-  @Column()
+  @Column({
+    length:10
+  })
   dob: Number;
 
   @Column()
   gender: string;
 
+  @Column()
+  year_of_diagnosis: Number;
+
+  @Column()
+  weight: Number;
+
+  @Column()
+  height: Number;
+
+  @Column()
+  metric: Number;
+
+  @Column()
+  is_social_user: Boolean;
+
+  @Column()
+  country_id: Number;
+
+  @Column({
+    length:1000
+  })
+  social_id: String;
+
+  @Column({
+    length:5000
+  })
+  profile_pic: String;
 
 }
